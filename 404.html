@@ -9,7 +9,7 @@
             let currentUrl = new URL(window.location.href);
             let params = currentUrl.searchParams;
             params.set('volume', '100');
-            let newUrl = 'https://inv.tux.pizza' + currentUrl.pathname + '?' + params.toString();
+            let newUrl = 'https://inv.tux.pizza' + currentUrl.pathname.replace('/super-goggles', '') + '?' + params.toString();
             window.location.href = newUrl;
         };
     </script>
